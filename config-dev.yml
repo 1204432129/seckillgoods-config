@@ -18,6 +18,16 @@ spring:
     pool:
       enabled: false
 
+redis:
+  host: 192.168.27.134
+  port: 6379
+  timeout: 10
+  password: redis
+  pool-max-idle: 500
+  pool-max-total: 500
+  pool-max-wait: 500
+
+
 mybatis:
   type-aliases-package: com.yj.entites    # 所有Entity别名类所在包
   configuration:
@@ -38,4 +48,5 @@ logging:
   level:
     # feign 日志以什么级别监控哪个接口
     com.zhao.demo.service.PaymentFeignService: debug
+
 
